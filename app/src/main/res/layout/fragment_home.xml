@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    tools:context=".ui.home.HomeFragment">
+
+    <FrameLayout
+        android:id="@+id/fy_search"
+        android:layout_marginTop="@dimen/medium_dimen"
+        android:layout_marginStart="@dimen/medium_dimen"
+        android:layout_marginEnd="@dimen/small_dimen"
+        android:layout_marginBottom="@dimen/medium_dimen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/home_button_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ib_filter"
+        app:layout_constraintBottom_toBottomOf="@id/ib_filter"
+        app:layout_constraintEnd_toStartOf="@id/ib_filter">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/search_icon"
+            android:layout_margin="@dimen/medium_dimen"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="start|center"
+            android:tint="?attr/colorPrimaryVariant"
+            app:srcCompat="@drawable/search_icon" />
+
+        <EditText
+            android:id="@+id/ed_searchText"
+            android:layout_marginStart="56dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="@dimen/text_body_medium"
+            android:textColor="@color/white"
+            android:textColorHint="@color/light_gray"
+            android:hint="@string/search"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLength="25"
+            android:maxLines="1"
+            android:singleLine="true"/>
+
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/ib_filter"
+        android:layout_marginEnd="@dimen/medium_dimen"
+        android:layout_marginTop="@dimen/medium_dimen"
+        android:padding="@dimen/medium_dimen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/filter_icon"
+        android:background="@drawable/home_button_background"/>
+
+    <TextView
+        android:id="@+id/tv_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tiny_dimen"
+        android:textColor="@color/green"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="@dimen/text_body_large"
+        app:layout_constraintTop_toTopOf="@id/ib_sort"
+        app:layout_constraintEnd_toStartOf="@id/ib_sort"
+        tools:text="[По рейтингу]" />
+
+    <ImageButton
+        android:id="@+id/ib_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_dimen"
+        android:src="@drawable/sort_icon"
+        android:backgroundTint="@color/dark"
+        app:layout_constraintTop_toBottomOf="@id/fy_search"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_sort"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:indeterminateTint="@color/green"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_dimen"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tv_sort"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

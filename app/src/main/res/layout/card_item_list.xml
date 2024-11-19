@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_main"
+    style="?attr/materialCardViewFilledStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/medium_dimen"
+    android:layout_marginEnd="@dimen/medium_dimen"
+    android:layout_marginBottom="@dimen/medium_dimen"
+    android:backgroundTint="@color/dark_gray"
+    app:cardCornerRadius="@dimen/medium_dimen"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageButton
+                android:id="@+id/ib_favourites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/small_dimen"
+                android:layout_marginEnd="@dimen/small_dimen"
+                android:background="@drawable/round_button_main"
+                android:backgroundTint="@color/glass"
+                android:padding="6dp"
+                android:src="@drawable/favourites_item" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:layout_marginStart="@dimen/small_dimen"
+                android:layout_marginBottom="@dimen/small_dimen"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/home_button_background"
+                    android:backgroundTint="@color/glass"
+                    android:paddingStart="6dp"
+                    android:paddingTop="@dimen/tiny_dimen"
+                    android:paddingEnd="6dp"
+                    android:paddingBottom="@dimen/tiny_dimen">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/star_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/tiny_dimen"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="5.0"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="@dimen/tiny_dimen"
+                    android:background="@drawable/home_button_background"
+                    android:backgroundTint="@color/glass"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingStart="6dp"
+                    android:paddingTop="@dimen/tiny_dimen"
+                    android:paddingEnd="6dp"
+                    android:paddingBottom="@dimen/tiny_dimen"
+                    android:text="22 May 2024"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_dimen"
+                android:layout_marginTop="@dimen/medium_dimen"
+                android:layout_marginEnd="@dimen/medium_dimen"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_medium"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:text="[Title]" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_dimen"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="@dimen/medium_dimen"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_medium"
+                android:maxLines="2"
+                android:textColor="@color/stroke"
+                android:textSize="12sp"
+                tools:text="[Description]" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/medium_dimen"
+                    android:layout_marginBottom="@dimen/medium_dimen"
+                    android:fontFamily="@font/roboto_medium"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="[12000 ₽]" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:backgroundTint="@color/dark_gray"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/follow"
+                    android:textSize="12sp"
+                    app:icon="@drawable/follow_icon"
+                    app:iconGravity="end"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="NotSibling" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
