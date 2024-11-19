@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">CourseSearch</string>
+    <string name="home">Главная</string>
+    <string name="favourites">Избранное</string>
+    <string name="profile">Аккаунт</string>
+    <string name="by_star">По популярности</string>
+    <string name="by_date">По дате добавления</string>
+    <string name="by_rating">По рейтингу</string>
+    <string name="search">Search courses…</string>
+    <string name="follow">Подробнее</string>
+    <string name="free">Бесплатно</string>
+    <string name="owner">Автор</string>
+    <string name="about">О курсе</string>
+    <string name="start_course">Начать курс</string>
+    <string name="redirect">Перейти на платформу</string>
 </resources>
